@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 7000;
 
 app.use(getRouter(addon));
 
-app.get("/", (req,res)=>{
+app.get("/", (req, res) => {
     res.send("MyTube Stremio Addon Running");
 });
 
 
-app.listen(PORT, ()=>{
+app.listen(PORT, "0.0.0.0", () => {
     console.log("MyTube running on port " + PORT);
 });
