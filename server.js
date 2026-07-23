@@ -6,13 +6,18 @@ const app = express();
 
 const PORT = process.env.PORT || 7000;
 
-app.use(getRouter(addon));
 
+// اختبار بسيط
 app.get("/", (req, res) => {
-    res.send("MyTube Stremio Addon Running");
+    res.status(200).send("MyTube Stremio Addon Running");
 });
 
 
+// تشغيل Stremio addon
+app.use(getRouter(addon));
+
+
+// Railway يحتاج الاستماع على كل الواجهات
 app.listen(PORT, "0.0.0.0", () => {
-    console.log("MyTube running on port " + PORT);
+    console.log(`MyTube running on port ${PORT}`);
 });
