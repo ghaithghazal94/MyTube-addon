@@ -1,0 +1,14 @@
+{
+  "name": "mytube",
+  "version": "1.0.0",
+  "description": "MyTube Stremio Addon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2",
+    "stremio-addon-sdk": "^1.6.10",
+    "axios": "^1.18.1"
+  }
+}
